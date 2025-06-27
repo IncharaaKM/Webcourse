@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! - Web Dev Course Material</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f7e0ed 0%, #e8d0ec 100%); /* Gentle, warm gradient */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .thankyou-card {
+            background-color: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px; /* Spacing between elements */
+        }
+        h1 {
+            color: #4a5568;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        p {
+            color: #718096;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 15px; /* Adjust spacing */
+        }
+        .download-link {
+            background-image: linear-gradient(to right, #6d28d9, #9333ea); /* Deep purple gradient */
+            color: white;
+            padding: 18px 36px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(109, 40, 217, 0.4);
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+        }
+        .download-link:hover {
+            background-position: right center;
+            box-shadow: 0 8px 20px rgba(109, 40, 217, 0.6);
+            transform: translateY(-2px);
+        }
+        /* Icon styling */
+        .icon-check {
+            width: 60px;
+            height: 60px;
+            color: #22c55e; /* Green checkmark */
+            margin-bottom: 20px;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .thankyou-card {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .download-link {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+            .icon-check {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thankyou-card">
+        <!-- SVG Checkmark Icon for a modern touch -->
+        <svg class="icon-check" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+
+        <h1>Thank You for Registering!</h1>
+        <p>
+            We appreciate your interest in our web development course material. Your journey to becoming a skilled developer begins now!
+        </p>
+        <p>
+            Click the button below to instantly access your course material PDF.
+        </p>
+        <a href="https://www3.cs.stonybrook.edu/~pfodor/courses/CSE316/L03-HTML_CSS.pdf" target="_blank" class="download-link">
+            Download Your Course Material
+        </a>
+    </div>
+</body>
+</html>
