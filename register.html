@@ -133,23 +133,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>
             Please provide a few details to access your exclusive web development course material. We're excited to have you join our learning community!
         </p>
-        <form action="thankyou.html" method="GET">
-            <div class="mb-4">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required class="focus:outline-none">
-            </div>
-            <div class="mb-4">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="email@example.com" required class="focus:outline-none">
-            </div>
-            <div class="mb-6">
-                <label for="interest">What excites you most about web development?</label>
-                <textarea id="interest" name="interest" placeholder="E.g., building interactive apps, designing beautiful UIs, career growth, etc." rows="4" class="focus:outline-none"></textarea>
-            </div>
-            <button type="submit" class="button-submit">
-                Download Now
-            </button>
-        </form>
+        <form id="webDevInterestForm" action="thankyou.html" method="GET">
+    <div class="mb-4">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required class="focus:outline-none">
+    </div>
+    <div class="mb-4">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="email@example.com" required class="focus:outline-none">
+    </div>
+    <div class="mb-6">
+        <label for="interest">What excites you most about web development?</label>
+        <textarea id="interest" name="interest" placeholder="E.g., building interactive apps, designing beautiful UIs, career growth, etc." rows="4" class="focus:outline-none"></textarea>
+    </div>
+    <button id="downloadBtn" type="submit" class="button-submit">
+        Download Now
+    </button>
+</form>
+
     </div>
 </body>
 </html>
