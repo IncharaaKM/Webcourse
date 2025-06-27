@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Web Dev Course Material</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0f2f7 0%, #d1ecf1 100%); /* Softer blue gradient */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07); /* Gentle shadow */
+            border-radius: 20px; /* Smooth rounded corners */
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e2e8f0; /* Subtle border */
+        }
+        h1 {
+            color: #4a5568;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        p {
+            color: #718096;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 20px;
+            border: 1px solid #cbd5e0; /* Light border */
+            border-radius: 10px; /* Rounded input fields */
+            font-size: 1rem;
+            color: #4a5568;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            -webkit-appearance: none; /* For consistent styling across browsers */
+            -moz-appearance: none;
+            appearance: none;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #8a57ff; /* Focus highlight */
+            box-shadow: 0 0 0 3px rgba(138, 87, 255, 0.25); /* Glow effect on focus */
+            outline: none; /* Remove default outline */
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .button-submit {
+            background-image: linear-gradient(to right, #8a57ff, #da7bff); /* Different, soft purple gradient */
+            color: white;
+            padding: 18px 36px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(138, 87, 255, 0.4);
+            border: none;
+            cursor: pointer;
+            width: auto; /* Allow button to size naturally */
+        }
+        .button-submit:hover {
+            background-position: right center;
+            box-shadow: 0 8px 20px rgba(138, 87, 255, 0.6);
+            transform: translateY(-2px);
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 0.95rem;
+            }
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                padding: 12px 15px;
+            }
+            .button-submit {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Unlock Your Course Material!</h1>
+        <p>
+            Please provide a few details to access your exclusive web development course material. We're excited to have you join our learning community!
+        </p>
+        <form action="thankyou.html" method="GET">
+            <div class="mb-4">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required class="focus:outline-none">
+            </div>
+            <div class="mb-4">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required class="focus:outline-none">
+            </div>
+            <div class="mb-6">
+                <label for="interest">What excites you most about web development?</label>
+                <textarea id="interest" name="interest" placeholder="E.g., building interactive apps, designing beautiful UIs, career growth, etc." rows="4" class="focus:outline-none"></textarea>
+            </div>
+            <button type="submit" class="button-submit">
+                Download Now
+            </button>
+        </form>
+    </div>
+</body>
+</html>
