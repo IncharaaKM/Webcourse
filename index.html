@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignite Your Future: Web Development Mastery</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%); /* Softer, slightly deeper gradient */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden; /* Prevent scrollbar from background elements */
+            position: relative;
+        }
+
+        /* Subtle background pattern/shapes for visual interest */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            transform: rotate(45deg);
+            z-index: 0;
+            filter: blur(80px);
+        }
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 400px;
+            height: 400px;
+            background: rgba(138, 87, 255, 0.1);
+            border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+            transform: rotate(-30deg);
+            z-index: 0;
+            filter: blur(100px);
+        }
+
+        .card {
+            background-color: #ffffff;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Stronger, more elegant shadow */
+            border-radius: 25px; /* More pronounced rounded corners */
+            padding: 50px; /* More padding */
+            max-width: 850px; /* Slightly wider */
+            width: 100%;
+            text-align: center;
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth hover effect */
+            border: 1px solid #e2e8f0; /* Subtle border */
+            position: relative; /* For z-index to work */
+            z-index: 1; /* Ensure card is above background elements */
+        }
+        .card:hover {
+            transform: translateY(-8px); /* More noticeable lift on hover */
+        }
+        .button-primary {
+            background-image: linear-gradient(to right, #6a7eff, #8a57ff); /* Vibrant, appealing gradient */
+            color: white;
+            padding: 20px 40px; /* Larger button */
+            font-size: 1.35rem; /* Larger text */
+            font-weight: 800; /* Bolder text */
+            border-radius: 15px; /* More rounded */
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 8px 20px rgba(106, 126, 255, 0.5); /* Stronger shadow */
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            letter-spacing: 0.05em; /* Slight letter spacing */
+            position: relative;
+            overflow: hidden; /* For pseudo-element effect */
+        }
+        .button-primary:hover {
+            background-position: right center;
+            box-shadow: 0 10px 25px rgba(106, 126, 255, 0.7);
+            transform: translateY(-3px);
+            /* Sparkle effect on hover */
+        }
+        .button-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .button-primary:hover::before {
+            left: 100%;
+        }
+
+        h1 {
+            color: #364054; /* Darker, richer grey */
+            font-size: 3rem; /* Significantly larger heading */
+            margin-bottom: 25px;
+            line-height: 1.2;
+            font-weight: 800; /* Extra bold */
+            letter-spacing: -0.02em; /* Tighter letter spacing */
+        }
+        p {
+            color: #6a778c; /* Slightly darker medium grey for body text */
+            font-size: 1.25rem; /* Larger body text */
+            line-height: 1.8;
+            margin-bottom: 35px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .icon-web-dev {
+            width: 120px; /* Larger icon */
+            height: 120px;
+            margin: 0 auto 30px;
+            color: #8a57ff; /* Accent color from gradient */
+            animation: bounceIn 1s ease-out; /* Simple entry animation */
+        }
+
+        /* Keyframe for icon animation */
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .card {
+                padding: 40px 25px;
+            }
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+            }
+            .button-primary {
+                padding: 16px 32px;
+                font-size: 1.1rem;
+            }
+            .icon-web-dev {
+                width: 90px;
+                height: 90px;
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 15px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .button-primary {
+                padding: 14px 28px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- Modern, abstract SVG icon for web development -->
+        <svg class="icon-web-dev" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16L2 12l4-4"></path>
+        </svg>
+
+        <h1 class="mb-4">Your Code Journey Begins Here!</h1>
+        <p class="mb-6">
+            Dive into the captivating world of web development with our exclusive course material. Whether you're a curious beginner or an aspiring professional, unlock the power to create stunning, interactive web experiences. Our expertly curated resources provide clear, step-by-step guidance to build your skills and ignite your digital future.
+        </p>
+        <p class="mb-8 font-semibold">
+            Ready to craft your digital dreams into reality?
+        </p>
+        <a href="registration.html" id="downloadButton" class="button-primary">
+            Download Your Free Course Material
+        </a>
+    </div>
+</body>
+</html>
